@@ -1,0 +1,15 @@
+{
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "demo/src/main/java/com/example",
+        "13design patterns/bridge/src/main/java/com/example",
+        "03coreClass/02StringBuilder/stringbuilder/src/main/java/com/example",
+        "02class",
+        "01basic/02arr/src",
+        "01basic/01vairable/src",
+        "03coreClass/04javaBean/bean/src/main/java/com/example"
+    ],
+    "java.compile.nullAnalysis.mode": "automatic",
+    "spring-boot.ls.java.home": "C:\\Program Files\\Java\\jdk-21",
+    "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-21",
+}
