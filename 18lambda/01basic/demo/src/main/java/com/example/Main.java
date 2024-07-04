@@ -8,6 +8,9 @@ public class Main {
     public static void main(String[] args) {
         String[] arr = { "a", "b", "e", "c" };
         System.out.println(Arrays.toString(arr));
+        /*
+         * 方式一：传递具体对象
+         */
         Arrays.sort(arr, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
@@ -17,7 +20,7 @@ public class Main {
         System.out.println(Arrays.toString(arr));
 
         /*
-         * Comparator只定义了单个抽象接口，@FunctionalInterface，
+         * Comparator只定义了单个抽象接口，@FunctionalInterface，因此可以只传递函数体
          */
 
         String[] array = new String[] { "Apple", "Orange", "Banana", "Lemon" };
