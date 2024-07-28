@@ -1,17 +1,28 @@
 package com.example.func;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
         String[] array = new String[] { "Apple", "Orange", "Banana", "Lemon" };
+
         Arrays.sort(array, Main::cmp);
+        Arrays.sort(array, String::compareTo);
+
+        //最全写法
+        Arrays.sort(arrays,new Comparator<T>() {
+            @Override
+            public int compareTo(T o1, T o2) {
+                return o1.compareTo(o2);
+            }
+        } );
 
         /*
          * int compareTo(String anotherString)
          * 加上this指针，也是两个参数 a.compareTo(anotherString)
          */
-        Arrays.sort(array, String::compareTo);
+        Arrays.sort(array, (a, b)->{ return a.compareTo(b);});
 
     }
 
