@@ -17,6 +17,8 @@ public class Main {
         System.out.println(Weekday.FRI.ordinal());
 
         print();
+
+        System.out.println(Weekday.valueOf("SUN"));
     }
 
     public static void print() {

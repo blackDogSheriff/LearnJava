@@ -1,0 +1,38 @@
+run-type: server
+local-addr: 0.0.0.0
+local-port: 8443
+remote-addr: 127.0.0.1
+remote-port: 8080
+log-level: 1
+log-file: /var/trojan.log
+password:
+  - clear
+ssl:
+  cert: /home/docker/site/cert/trojan/junmingliu.cn_bundle.crt
+  key: /home/docker/site/cert/trojan/junmingliu.cn.key
+  sni: junmingliu.cn
+  fallback-addr: 127.0.0.1
+  fallback-port: 8080
+mux:
+  enabled: true
+  concurrency: 8
+  idle_timeout: 60
+websocket:
+  enabled: true
+  path: /home/docker/site/websocke
+  hostname: junmingliu.cn
+  obfuscation-password:
+  double-tls: true
+  ssl:
+    verify: true
+    verify-hostname: true
+    cert: /home/docker/site/cert/trojan/junmingliu.cn_bundle.crt
+    key: /home/docker/site/cert/trojan/junmingliu.cn.key
+    key-password: clear
+    prefer-server-cipher: false
+    sni: junmingliu.cn
+    session-ticket: true
+    reuse-session: true
+    plain-http-response:
+
+
