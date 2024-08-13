@@ -5,36 +5,38 @@ public class Main {
         Thread t = new MyThread();
         t.start();
         Thread.sleep(1000);
-        t.interrupt(); // 中断t线程
-        t.join(); // 等待t线程结束
-        System.out.println("end");
+        t.interrupt();
+        t.join();
+        System.out.println("main thread finished");
     }
 }
 
 class MyThread extends Thread {
     public void run() {
-        Thread hello = new HelloThread();
-        hello.start(); // 启动hello线程
+        System.out.println("MyThread started");
+        Thread thread = new HelloThread();
+        thread.start();
         try {
-            hello.join(); // 等待hello线程结束
+            /*
+             * run是立即返回的，因此join不会阻塞
+             */
+            thread.join(); // 等待
+            System.out.println("HelloThread end");
         } catch (InterruptedException e) {
-            System.out.println("interrupted!");
+            System.out.println("thread received Interrupted");
         }
-        hello.interrupt();
+        System.out.println("MyThread end");
+        thread.interrupt();
     }
 }
 
 class HelloThread extends Thread {
     public void run() {
+        System.out.println("HelloThread started");
         int n = 0;
         while (!isInterrupted()) {
+            System.out.println(n + " Hello");
             n++;
-            System.out.println(n + " hello!");
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                break;
-            }
         }
     }
 }
