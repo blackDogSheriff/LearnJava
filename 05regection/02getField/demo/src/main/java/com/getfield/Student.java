@@ -1,12 +1,35 @@
 package com.getfield;
 
-class Student extends Person {
-    public int score;
+public class Student extends Person {
+    public int grade;
+    private int score;
 
-    private int grade;
+    public Student() {
+        super();
+        this.grade = 0;
+        this.score = 0;
+    }
 
-    public Student(String name) {
-        super(name);
+    public Student(String name, String city, int grade, int score) {
+        super(name, city);
+        this.grade = grade;
+        this.score = score;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 
 }

@@ -45,6 +45,7 @@ public class Main {
         // long类型占用的bit和byte数量:
         int sizeOfLong = Long.SIZE; // 64 (bits)
         int bytesOfLong = Long.BYTES; // 8 (bytes)
+        boolean jla = Boolean.FALSE;
 
     }
 }

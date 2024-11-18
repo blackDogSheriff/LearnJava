@@ -1,5 +1,11 @@
 package com.example;
 
+/*
+ * - 静态字段：属于类
+ * - 静态方法：属于类，用来处理静态字段
+ * - public目前看和普通的没区别 
+ */
+
 public class Person {
     public String name;
     public int age;

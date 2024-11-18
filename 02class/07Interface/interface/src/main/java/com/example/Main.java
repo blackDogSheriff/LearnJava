@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+/*
+ * - 接口
+ *  - 接口只包含抽象方法
+ */
 public class Main {
     public static void main(String[] args) {
         // 可以查看继承关系

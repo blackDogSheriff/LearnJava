@@ -1,4 +1,4 @@
-package com.example;
+package com.example.ab;
 
 public class Teacher extends Person {
 

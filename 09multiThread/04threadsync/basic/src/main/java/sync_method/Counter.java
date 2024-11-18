@@ -3,6 +3,8 @@ package sync_method;
 /*
  * 线程安全的类：
  * - 可以被多线程调用的类
+ * - 不变类
+ * - 只有静态方法的类
  */
 
 public class Counter {
@@ -10,6 +12,7 @@ public class Counter {
 
 
     //直接锁实例
+    //如果是静态方法，则锁定类的class
     public void add(int n) {
         synchronized (this) {
             count += n;
@@ -27,8 +30,11 @@ public class Counter {
         }
     }
 
+    //只读不需要同步
     public int get() {
         return count;
     }
 
+    //写一个线程安全的加法器
+    
 }

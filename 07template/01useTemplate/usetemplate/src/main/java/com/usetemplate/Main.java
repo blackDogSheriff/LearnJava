@@ -6,21 +6,22 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        ArrayList<Number> list1 = new ArrayList<>();
+        List<String> l = list; //向上转型
+
         // 没有定义泛型类型，默认泛型类型伟Object，编译警告
         List list = new ArrayList<>();
         list.add("hello");
-        list.add("world");
-
         String first = (String) list.get(0);
-        String second = (String) list.get(1);
 
         // 泛型类型为String
         List<String> list1 = new ArrayList<>();
         list1.add("hello");
         list1.add("world");
 
-        String first1 = (String) list1.get(0);
-        String second1 = (String) list1.get(1);
+        String first1 = list1.get(0);
+        String second1 = list1.get(1);
 
         // 泛型类型可以接收其子类对象
         List<Number> list2 = new ArrayList<>();

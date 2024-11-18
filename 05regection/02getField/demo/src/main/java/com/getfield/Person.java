@@ -1,19 +1,33 @@
 package com.getfield;
 
-class Person {
+public class Person {
     public String name;
-    private int age;
+    private String city;
 
-    public Person(String name) {
+    public Person() {
+        this("", "");
+    }
+
+    public Person(String name, String city) {
         this.name = name;
+        this.city = city;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getName() {
-        return this.name;
+    public String getCity() {
+        return city;
     }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
 
 }

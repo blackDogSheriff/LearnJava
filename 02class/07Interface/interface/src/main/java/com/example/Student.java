@@ -8,6 +8,7 @@ public class Student implements Person{
     public Student(String name){
         this.name = name;
     }
+
     @Override
     public void hello(){
         System.out.println(this.name + " hello");

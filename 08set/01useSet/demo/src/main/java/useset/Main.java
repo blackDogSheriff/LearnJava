@@ -34,6 +34,7 @@ public class Main {
             System.out.println(s);
         }
 
+
         // 使用迭代器遍历
         for (Iterator<String> it = list.iterator(); it.hasNext();) {
             String s = it.next();

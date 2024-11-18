@@ -23,14 +23,14 @@ public class Main {
             {
                 put("A", "1");
             }
-        }; //继承自HashMap，并且添加了static初始化代码块
+        }; // 继承自HashMap，并且添加了static初始化代码块
 
         /*
          * Static Nested classes
          */
 
-         //独立类，但是拥有Outer的访问权限
-         Outer.StaticNested os = new Outer.StaticNested();
-         os.hello();
+        // 独立类，但是拥有Outer的访问权限
+        Outer.StaticNested os = new Outer.StaticNested();
+        os.hello();
     }
 }

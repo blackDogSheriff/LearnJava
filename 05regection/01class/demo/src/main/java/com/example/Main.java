@@ -1,28 +1,21 @@
 package com.example;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        String s = "hello";
+
         /*
          * 获取Class实例
          */
-        // 1. 直接通过一个class的静态变量“class”获取
         Class cls = String.class;
-
-        // 2. 通过实例获取
-        String s = "hello";
         Class cls1 = s.getClass();
+        Class clst = Class.forName("java.lang.String");
 
-        // 3. 通过完整类名获取；
-        try {
-            Class clst = Class.forName("java.lang.String");
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
+        /*
+         * 比较
+         */
         // Intenceof可以比较class以及是否为子类，但是==只能比较是否为一个class（JVM中实例唯一）
         Integer n = Integer.valueOf(123);
-
         boolean b1 = n instanceof Integer; // true，因为n是Integer类型
         boolean b2 = n instanceof Number; // true，因为n是Number类型的子类
 
@@ -31,10 +24,10 @@ public class Main {
         // false，因为Integer.class!=Number.class
 
         printClassInfo("".getClass());
-        printClassInfo(Runnable.class);
-        printClassInfo(java.time.Month.class);
-        printClassInfo(String[].class); // 也是一种Class
-        printClassInfo(int.class); // JVM为基本类型也创建了Class实例，通过int.class访问
+        //printClassInfo(Runnable.class);
+        //printClassInfo(java.time.Month.class);
+        //printClassInfo(String[].class); // 也是一种Class
+        //printClassInfo(int.class); // JVM为基本类型也创建了Class实例，通过int.class访问
 
         // 缺点：只能调用public的无参构造方法。
         try {
